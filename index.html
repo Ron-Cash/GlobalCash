@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GlobalStash FX - The World’s #1 Currency Exchange!</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js" defer></script>
+<style>
+/* Hero animation */
+.hero-bg {
+  background: linear-gradient(270deg, #ff416c, #ff4b2b, #1fa2ff, #12d8fa);
+  background-size: 800% 800%;
+  animation: gradientBG 15s ease infinite;
+}
+@keyframes gradientBG {
+  0% {background-position:0% 50%}
+  50% {background-position:100% 50%}
+  100% {background-position:0% 50%}
+}
+
+/* Button hover glow */
+.btn-glow:hover {
+  box-shadow: 0 0 20px rgba(255,255,255,0.6);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+/* Card hover lift */
+.card-hover:hover {
+  transform: translateY(-10px) scale(1.05);
+  transition: all 0.3s ease;
+}
+</style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+<!-- Navbar -->
+<nav class="bg-white shadow-md py-4 px-6 flex justify-between items-center sticky top-0 z-50">
+  <div class="text-2xl font-bold text-blue-900">GlobalStash FX</div>
+  <ul class="flex gap-6">
+    <li><a href="#" class="text-gray-800 hover:text-blue-900 font-semibold">Home</a></li>
+    <li><a href="#services" class="text-gray-800 hover:text-blue-900 font-semibold">Services</a></li>
+    <li><a href="#contact" class="text-gray-800 hover:text-blue-900 font-semibold">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-bg text-white py-32 relative overflow-hidden text-center">
+  <h1 class="text-5xl md:text-6xl font-extrabold mb-6 animate-bounce">Need Cash? We Got a Stash.</h1>
+  <p class="text-2xl md:text-3xl mb-10 font-semibold">Fastest. Safest. Most Reliable Currency Exchange Worldwide!</p>
+  <div class="flex justify-center gap-6">
+    <a href="#buy" class="btn-glow bg-yellow-400 text-blue-900 px-8 py-4 rounded-xl font-bold hover:bg-yellow-300 transition">Buy Currency</a>
+    <a href="#sell" class="btn-glow bg-pink-500 text-white px-8 py-4 rounded-xl font-bold hover:bg-pink-400 transition">Sell Currency</a>
+  </div>
+  <!-- Animated background shapes -->
+  <div class="absolute top-0 left-0 w-64 h-64 bg-purple-500 rounded-full opacity-30 animate-pulse"></div>
+  <div class="absolute bottom-10 right-10 w-48 h-48 bg-pink-400 rounded-full opacity-25 animate-pulse"></div>
+</section>
+
+<!-- Exchange Widget -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold mb-12 text-gray-800">Exchange Rates Like Never Before</h2>
+    <div class="max-w-3xl mx-auto p-6 rounded-2xl shadow-2xl bg-gradient-to-r from-yellow-200 via-pink-200 to-purple-200">
+      <div class="flex flex-col md:flex-row gap-4">
+        <input type="number" id="amount" placeholder="Amount to Exchange" class="border p-3 rounded w-full md:w-1/2 font-semibold">
+        <select id="currency" class="border p-3 rounded w-full md:w-1/2 font-semibold">
+          <option value="AUD">AUD - Australian Dollar</option>
+          <option value="USD">USD - US Dollar</option>
+          <option value="EUR">EUR - Euro</option>
+          <option value="GBP">GBP - British Pound</option>
+          <option value="JPY">JPY - Japanese Yen</option>
+          <option value="CAD">CAD - Canadian Dollar</option>
+          <option value="NZD">NZD - New Zealand Dollar</option>
+          <option value="CHF">CHF - Swiss Franc</option>
+          <option value="CNY">CNY - Chinese Yuan</option>
+          <option value="HKD">HKD - Hong Kong Dollar</option>
+          <option value="SGD">SGD - Singapore Dollar</option>
+          <option value="INR">INR - Indian Rupee</option>
+          <option value="ZAR">ZAR - South African Rand</option>
+          <option value="MXN">MXN - Mexican Peso</option>
+          <option value="SEK">SEK - Swedish Krona</option>
+          <option value="NOK">NOK - Norwegian Krone</option>
+          <option value="BRL">BRL - Brazilian Real</option>
+          <option value="KRW">KRW - South Korean Won</option>
+          <option value="RUB">RUB - Russian Ruble</option>
+          <option value="TRY">TRY - Turkish Lira</option>
+        </select>
+      </div>
+      <button id="convertBtn" class="mt-6 bg-blue-900 text-white px-8 py-3 rounded-xl font-bold btn-glow">Convert Now</button>
+      <p class="mt-4 text-lg font-semibold text-gray-700">Result: <span id="exchangeResult">0</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="py-20 bg-gradient-to-r from-purple-500 to-pink-400 text-white text-center">
+  <h2 class="text-4xl font-bold mb-12">Over 250,000 Happy Customers Worldwide!</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+    <div>
+      <h3 class="text-6xl font-extrabold mb-2">15+</h3>
+      <p class="text-xl font-semibold">Years in Business</p>
+    </div>
+    <div>
+      <h3 class="text-6xl font-extrabold mb-2">250K+</h3>
+      <p class="text-xl font-semibold">Customers Served</p>
+    </div>
+    <div>
+      <h3 class="text-6xl font-extrabold mb-2">4.9★</h3>
+      <p class="text-xl font-semibold">Customer Rating</p>
+    </div>
+  </div>
+</section>
+
+<!-- Currency Showcase -->
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold mb-12 text-gray-800">Global Currencies We Exchange</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div class="card-hover bg-white p-6 rounded-2xl shadow-xl text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/USD_Symbol.png" alt="USD" class="h-20 mx-auto mb-4">
+        <h3 class="text-xl font-bold mb-2">US Dollar</h3>
+        <p class="text-blue-900 font-semibold">USD</p>
+      </div>
+      <div class="card-hover bg-white p-6 rounded-2xl shadow-xl text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Euro_symbol_black.svg" alt="EUR" class="h-20 mx-auto mb-4">
+        <h3 class="text-xl font-bold mb-2">Euro</h3>
+        <p class="text-blue-900 font-semibold">EUR</p>
+      </div>
+      <div class="card-hover bg-white p-6 rounded-2xl shadow-xl text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/GBP_symbol.svg" alt="GBP" class="h-20 mx-auto mb-4">
+        <h3 class="text-xl font-bold mb-2">British Pound</h3>
+        <p class="text-blue-900 font-semibold">GBP</p>
+      </div>
+      <div class="card-hover bg-white p-6 rounded-2xl shadow-xl text-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/JPY_symbol.svg" alt="JPY" class="h-20 mx-auto mb-4">
+        <h3 class="text-xl font-bold mb-2">Japanese Yen</h3>
+        <p class="text-blue-900 font-semibold">JPY</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-blue-900 text-white py-12 px-6 text-center">
+  <p class="mb-4">&copy; 2025 GlobalStash FX. All rights reserved.</p>
+  <div class="flex justify-center gap-6 mb-4">
+    <a href="#" class="hover:underline font-semibold">Privacy Policy</a>
+    <a href="#" class="hover:underline font-semibold">Terms & Conditions</a>
+    <a href="#contact" class="hover:underline font-semibold">Contact</a>
+  </div>
+  <p class="text-sm">Experience the fastest, most trusted currency exchange on the planet!</p>
+</footer>
+
+<script>
+feather.replace();
+
+// Multi-currency demo rates (relative to AUD)
+const rates = {
+  AUD: 1,
+  USD: 0.64,
+  EUR: 0.59,
+  GBP: 0.51,
+  JPY: 88.00,
+  CAD: 0.88,
+  NZD: 1.05,
+  CHF: 0.57,
+  CNY: 4.64,
+  HKD: 5.00,
+  SGD: 0.87,
+  INR: 53.5,
+  ZAR: 11.0,
+  MXN: 11.2,
+  SEK: 6.2,
+  NOK: 6.0,
+  BRL: 3.1,
+  KRW: 840,
+  RUB: 52.0,
+  TRY: 11.8
+};
+
+// DOM elements
+const amountInput = document.getElementById('amount');
+const currencySelect = document.getElementById('currency');
+const resultSpan = document.getElementById('exchangeResult');
+const convertBtn = document.getElementById('convertBtn');
+
+// Convert button click
+convertBtn.addEventListener('click', () => {
+  const amount = parseFloat(amountInput.value);
+  const currency = currencySelect.value;
+  if (!isNaN(amount) && rates[currency]) {
+    const converted = (amount * rates[currency]).toLocaleString();
+    resultSpan.textContent = `${converted} ${currency}`;
+  } else {
+    resultSpan.textContent = 'Invalid input';
+  }
+});
+</script>
+
+</body>
+</html>
