@@ -1,0 +1,2 @@
+# GlobalCash
+CounterfeitCash
